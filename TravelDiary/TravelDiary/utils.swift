@@ -36,7 +36,7 @@ func getEntries() async throws -> [BackendEntry] {
     
     let (data, response) = try await URLSession.shared.data(from: url)
     
-    guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+    guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
         throw BeError.invalidResponse
     }
     

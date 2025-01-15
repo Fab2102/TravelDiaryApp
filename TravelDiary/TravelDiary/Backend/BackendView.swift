@@ -17,7 +17,8 @@ struct BackendView: View {
         NavigationStack {
             List {
                 if entries.isEmpty {
-                    Text("No entries on the backend")
+                    Text("No entries on the backend.")
+                        .foregroundStyle(.secondary)
                 } else {
                     ForEach(entries) { entry in
                         NavigationLink(value: entry) {
@@ -28,8 +29,7 @@ struct BackendView: View {
             }
             .navigationTitle("Backend Entries")
             .navigationDestination(for: BackendEntry.self) { entry in
-                BackendDetailView(entry: entry)
-            }
+                BackendDetailView(entry: entry)}
             .task {
                 do {
                     entries = try await getEntries()
@@ -59,7 +59,7 @@ struct BackendEntry: Identifiable, Codable, Hashable {
     let title: String
     let text: String
     let images: [Image]
-    let locationName: String
+    let locationName: String?
     let dateTime: String
     
     struct Image: Codable, Hashable {

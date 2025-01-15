@@ -39,7 +39,7 @@ struct AddTripView: View {
                             modelContext.insert(newTrip)
                             dismiss()
                         } else {
-                            alertMessage = "The trip name cannot be empty!"
+                            alertMessage = NSLocalizedString("trip_name_empty", comment: "")
                             showAlert = true
                         }
                     }
@@ -61,4 +61,5 @@ struct AddTripView: View {
 #Preview {
     AddTripView()
         .modelContainer(for: [Trip.self], inMemory: true)
+        .environment(\.locale, Locale(identifier: "EN"))
 }

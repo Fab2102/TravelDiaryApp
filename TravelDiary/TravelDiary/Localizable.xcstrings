@@ -11,6 +11,50 @@
         }
       }
     },
+    "add_and_edit_entries" : {
+      "comment" : "Feature for adding and editing entries",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einträge erstellen und bearbeiten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add and edit entries."
+          }
+        }
+      }
+    },
+    "add_pictures_and_locations" : {
+      "comment" : "Feature for adding pictures and locations",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder und Orte hinzufügen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add pictures and locations."
+          }
+        }
+      }
+    },
+    "Backend" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backend"
+          }
+        }
+      }
+    },
     "Backend Entries" : {
       "localizations" : {
         "de" : {
@@ -31,6 +75,23 @@
         }
       }
     },
+    "create_and_save_trips" : {
+      "comment" : "Feature for creating and saving trips",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trips erstellen und speichern."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create and save trips."
+          }
+        }
+      }
+    },
     "Created on:" : {
       "localizations" : {
         "de" : {
@@ -46,12 +107,12 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entfernen"
+            "value" : "Löschen"
           }
         }
       }
     },
-    "Edit images" : {
+    "Edit Images" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -76,7 +137,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einträge für %@"
+            "value" : "Einträge von %@"
           }
         }
       }
@@ -136,7 +197,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ort"
+            "value" : "Standort"
           }
         }
       }
@@ -146,7 +207,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ort (optional)"
+            "value" : "Standort (optional)"
           }
         }
       }
@@ -166,17 +227,17 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Keine Einträge vorhanden."
+            "value" : "Keine Einträge verfügbar."
           }
         }
       }
     },
-    "No entries on the backend" : {
+    "No entries on the backend." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Keine Einträge am Backend vorhanden"
+            "value" : "Keine Einträge am Backend verfügbar."
           }
         }
       }
@@ -211,6 +272,26 @@
         }
       }
     },
+    "Publish" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veröffentlichen"
+          }
+        }
+      }
+    },
+    "Publishing..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veröffentlichen…"
+          }
+        }
+      }
+    },
     "Save" : {
       "localizations" : {
         "de" : {
@@ -221,22 +302,19 @@
         }
       }
     },
-    "Share" : {
+    "share_and_synchronize_entries" : {
+      "comment" : "Feature for sharing and synchronizing entries",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Veröffentlichen"
+            "value" : "Einträge veröffentlichen."
           }
-        }
-      }
-    },
-    "Sharing..." : {
-      "localizations" : {
-        "de" : {
+        },
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Veröffentlichen..."
+            "value" : "Publish entries."
           }
         }
       }
@@ -271,6 +349,38 @@
         }
       }
     },
+    "title_and_text_empty" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel und Text dürfen nicht leer sein!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Title and text cannot be empty!"
+          }
+        }
+      }
+    },
+    "trip_name_empty" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name darf nicht leer sein!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name cannot be empty!"
+          }
+        }
+      }
+    },
     "Tripname" : {
       "localizations" : {
         "de" : {
@@ -296,7 +406,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Willkommen zu Tripify!"
+            "value" : "Willkommen\n zu Tripify!"
           }
         }
       }

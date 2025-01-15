@@ -32,10 +32,10 @@ struct WelcomeView: View {
                     .foregroundColor(.primary)
                 
                 VStack(alignment: .leading, spacing: 12) {
-                    FeatureItem(icon: "airplane", text: "Create and save trips.")
-                    FeatureItem(icon: "pencil", text: "Add and edit entries.")
-                    FeatureItem(icon: "photo", text: "Add pictures and locations.")
-                    FeatureItem(icon: "arrow.up.circle", text: "Share and synchronize entries.")
+                    FeatureItem(icon: "airplane", text: NSLocalizedString("create_and_save_trips", comment: "Feature for creating and saving trips"))
+                    FeatureItem(icon: "pencil", text: NSLocalizedString("add_and_edit_entries", comment: "Feature for adding and editing entries"))
+                    FeatureItem(icon: "photo", text: NSLocalizedString("add_pictures_and_locations", comment: "Feature for adding pictures and locations"))
+                    FeatureItem(icon: "arrow.up.circle", text: NSLocalizedString("share_and_synchronize_entries", comment: "Feature for sharing and synchronizing entries"))
                 }
                 .padding(.horizontal, 20)
                 
@@ -86,7 +86,15 @@ struct FeatureItem: View {
 }
 
 
-#Preview {
+#Preview("English") {
     WelcomeView()
-        .modelContainer(for: [Trip.self, Entry.self])
+        .modelContainer(for: [Trip.self, Entry.self], inMemory: true)
+        .environment(\.locale, Locale(identifier: "EN"))
+        
+}
+
+#Preview("German") {
+    WelcomeView()
+        .modelContainer(for: [Trip.self, Entry.self], inMemory: true)
+        .environment(\.locale, Locale(identifier: "DE"))
 }

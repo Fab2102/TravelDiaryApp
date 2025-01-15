@@ -32,7 +32,7 @@ struct MainView: View {
                 }
             }
             
-            Tab("Backend Entries", systemImage: "cloud") {
+            Tab("Backend", systemImage: "cloud") {
                 BackendView()
             }
         }

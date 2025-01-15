@@ -36,7 +36,7 @@ struct TripEntryDetailView: View {
                         PhotosPicker(selection: $photosPickerItems_edit,
                                      selectionBehavior: .ordered,
                                      matching: .images) {
-                            Label("Edit images", systemImage: "photo")
+                            Label("Edit Images", systemImage: "photo")
                         }
                         if !tripEntry.images.isEmpty {
                             ScrollView(.horizontal) {
@@ -80,7 +80,7 @@ struct TripEntryDetailView: View {
             if isLoading {
                 VStack {
                     Spacer()
-                    ProgressView("Sharing...")
+                    ProgressView("Publishing...")
                         .padding(.top, 20)
                     Spacer()
                 }
@@ -92,15 +92,15 @@ struct TripEntryDetailView: View {
         .navigationTitle(tripEntry.title)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Share") {
+                Button("Publish") {
                     Task {
                         isLoading = true
                         do {
                             let result = try await postEntry(entry: tripEntry)
-                            alertMessage = "Successfully published!\nHTTP status code: \(result.statusCode)\nID: \(result.id)"
+                            alertMessage = "Successfully published!\nHTTP-Code: \(result.statusCode)\nID: \(result.id)"
                             showAlert = true
                         } catch {
-                            alertMessage = "Error while publishing.\nError: \(error)"
+                            alertMessage = "Error: \(error)"
                             showAlert = true
                         }
                         isLoading = false

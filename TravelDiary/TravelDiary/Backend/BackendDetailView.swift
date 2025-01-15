@@ -16,11 +16,11 @@ struct BackendDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Text(entry.title)
+                Text(entry.title.isEmpty ? "Unnamed Entry" : entry.title)
                     .font(.title)
                     .padding(.bottom, 10)
                 
-                Text(entry.locationName)
+                Text((entry.locationName?.isEmpty == false ? entry.locationName : "Unknown Location")!)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
@@ -31,7 +31,7 @@ struct BackendDetailView: View {
                 
                 Divider()
                 
-                Text(entry.text)
+                Text(entry.text.isEmpty ? "Could not find any text." : entry.text)
                     .padding(.top, 15)
                 
                 if entry.images.isEmpty {

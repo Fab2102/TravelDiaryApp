@@ -97,7 +97,7 @@ struct AddTripEntryView: View {
                             trip.tripEntries.append(newEntry)
                             dismiss()
                         } else {
-                            alertMessage = "Title and text cannot be empty!"
+                            alertMessage = NSLocalizedString("title_and_text_empty", comment: "")
                             showAlert = true
                         }
                     }
